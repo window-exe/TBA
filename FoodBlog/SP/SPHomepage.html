@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Sungai Petani</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<title>Cookie Test</title>
+	<script>
+		function setCookie(cname, cvalue, exdays) {
+			const d = new Date();
+			d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+			let expires = "expires=" + d.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(";");
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == " ") {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+
+		function checkCookie() {
+			let user = getCookie("username");
+			if (user != "") {
+				alert("Welcome back " + user);
+			} else {
+				user = prompt("What is your name?", "");
+				if (user != "" && user != null) {
+					setCookie("username", user, 7);
+					alert("Your name has been saved to the cookies!");
+				}
+			}
+		}
+
+		// Call checkCookie() when the page loads
+		window.onload = function() {
+			checkCookie();
+		};
+	</script>
+
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+
+	<link href="common-css/ionicons.css" rel="stylesheet">
+
+	<link href="common-css/layerslider.css" rel="stylesheet">
+
+
+	<link href="SPHomepage/css/styles.css" rel="stylesheet">
+
+	<link href="SPHomepage/css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+	<h1>Cookie Test Page</h1>
+
+	<header>
+
+		<div class="top-menu">
+
+			<ul class="left-area welcome-area">
+				<li class="hello-blog">Hello guys! Welcome to Sungai Petani!</li>
+				<li><a href="mailto:contact@yapblog.com">contact@yapblog.com</a></li>
+			</ul><!-- left-area -->
+
+
+			<div class="right-area">
+
+				<div class="src-area">
+					<form action="post">
+						<input class="src-input" type="text" placeholder="Search">
+						<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+					</form>
+				</div><!-- src-area -->
+
+				<ul class="social-icons">
+					<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+				</ul><!-- right-area -->
+
+			</div><!-- right-area -->
+
+		</div><!-- top-menu -->
+
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src="images/logo.png" alt="Logo Image"></a></div>
+
+		<div class="bottom-area">
+		
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+		
+			<ul class="main-menu" id="main-menu">
+				<li><a href="SPHomepage.html">HOME</a></li>
+				<li><a href="SPAbout.html">ABOUT</a></li>
+				<li><a href="SPContact.html">CONTACT</a></li>
+				<li><a href="/src/index.html">TBA</a></li>
+			</ul><!-- main-menu -->
+
+		</div><!-- conatiner -->
+	</header>
+
+
+	<div class="main-slider">
+		<div id="slider">
+
+			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+				<img src="images/SP07.jpg" class="ls-bg" alt="" />
+
+					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+						<a class="btn" href="https://www.malaysiaculinary.com/tempat-makan-best-di-sungai-petani/">GO</a>
+						<h3 class="title"><b>10 Best Places to Eat in Sungai Petani, Latest for 2023</b></h3>
+						<h6>19 January, 2023</h6>
+					</div>
+
+			</div><!-- ls-slide -->
+
+			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+				<img src="images/SP02.png" class="ls-bg" alt="" />
+
+					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+						<a class="btn" href="https://www.asiatravelbook.com/2019/07/sungai-petani30.html">GO</a>
+						<h3 class="title"><b>SP Local Food Guide </b></h3>
+						<h6>31 July, 2019</h6>
+					</div>
+
+			</div><!-- ls-slide -->
+
+			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+				<img src="images/SP03.png" class="ls-bg" alt="" />
+
+					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+						<a class="btn" href="https://penangfoodie.com/must-try-food-in-sungai-petani-2019/">GO</a>
+						<h3 class="title"><b>Top 15 SP Food Must Try </b></h3>
+						<h6>31 December, 2019</h6>
+					</div>
+
+			</div><!-- ls-slide -->
+
+			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+				<img src="images/SP04.jpg" class="ls-bg" alt="" />
+
+					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+						<a class="btn" href="http://www.celinesworld.my/2019/07/sp.html">GO</a>
+						<h3 class="title"><b>The Great Compilation of SP's Local Food Delights</b></h3>
+						<h6>10 July, 2019</h6>
+					</div>
+
+			</div><!-- ls-slide -->
+
+
+		<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+			<img src="images/SP06.jpg" class="ls-bg" alt="" />
+
+				<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+					<a class="btn" href="https://sambaltraveller.com/kedah/kedah-spfood/#.ZDrWnXZBzIU">GO</a>
+					<h3 class="title"><b>Top 7 Recommended Delicacies in SP, Kedah for 2023"</b></h3>
+					<h6>2 July, 2022</h6>
+				</div>
+
+		</div><!-- ls-slide -->
+
+		</div><!-- slider -->
+	</div><!-- main-slider -->
+
+
+	<section class="section blog-area">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-8 col-md-12">
+					<div class="blog-posts">
+
+						<div class="single-post">
+							<div class="image-wrapper"><img src="images/SP01.JPG" alt="Blog Image"></div>
+
+							<div class="icons">
+								
+								<ul class="right-area social-icons">
+									
+									<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+									
+								</ul>
+							</div>
+						
+							<p class="date"><em>Sunday, August 02, 2020</em></p>
+							<h3 class="title"><a href="#"><b class="light-color">An Affair of Love between a Couple and Sungai Petani's Local Cuisine </b></a></h3>
+							<p>Although born in Sekinchan, Selangor, the talented Malaysian musician Tang Xiao Kang is more familiar with Sungai Petani, Kedah.
+
+								This is because Tang's wife is from Sungai Petani and they visit her hometown every month, and he always accompanies her.
+								
+								Over the years, his wife's love for the local cuisine has caused his weight loss plan to repeatedly fail, leading him to sing helplessly, "Falling in love with you is not my choice!"
+													
+							</p>
+							<a class="btn read-more-btn" href="https://guangming.com.my/%E3%80%90%E6%8B%9B%E7%89%8C%E8%8F%9C%E3%80%91%E9%9B%99%E6%BA%AA%E5%A4%A7%E5%B9%B4%E7%BE%8E%E9%A3%9F%E5%A4%AA%E8%AA%98%E4%BA%BA-%E6%B8%9B%E8%82%A5%E6%98%AF%E6%98%8E%E5%A4%A9%E7%9A%84%E4%BA%8B%EF%BC%81"><b>READ MORE</b></a>
+						</div><!-- single-post -->
+
+						
+						<div class="single-post">
+							<div class="image-wrapper"><img src="images/SP08.jpg" alt="Blog Image"></div>
+
+							<div class="icons">
+								
+								<ul class="right-area social-icons">
+									<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+								</ul>
+							</div>
+							<h6 class="date"><em>Monday, October 13, 2017</em></h6>
+							<h3 class="title"><a href="#"><b class="light-color">20 Recommended Halal Restaurant 2023</b></a></h3>
+							<p>Looking for the Best Places to Eat in Sungai Petani?
+								Sungai Petani is a great location when it comes to interesting dining places. 
+								Therefore, it's no wonder many are confused about where to go first.
+							    Are you still searching for the best places to eat? Don't worry, we've listed 20 best places to eat in Sungai Petani that foodies can try. Keep reading!"</p>
+							<a class="btn read-more-btn" href="https://saji.my/sungai-petani/"><b>READ MORE</b></a>
+						</div><!-- single-post -->
+
+						<div class="row">
+
+							<div class="col-lg-6 col-md-12">
+								<div class="single-post">
+									<div class="image-wrapper"><img src="images/SP09.jpg" alt="Blog Image"></div>
+
+									<div class="icons">
+										
+										<ul class="right-area social-icons">
+											<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                        <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                        <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+										</ul>
+									</div>
+									<h6 class="date"><em>Monday, October 13, 2021</em></h6>
+									<h3 class="title"><a href="#"><b class="light-color">Top 16 Best Cafes In Sungai Petani 2023</b></a></h3>
+									<p>After all of that walking and exploring, it is understandable to say that you can be feeling thirsty or hungry. Worry not, 
+										as Sungai Petani also has a vast selection of cafes you can choose from based on your preference. 
+										Let us check out the top 16 cafes in Sungai Petani to create beautiful memories with family and friends. </p>
+									<a class="btn read-more-btn" href="https://www.myweekendplan.asia/top-best-cafes-in-sungai-petani/"><b>READ MORE</b></a>
+								</div><!-- single-post -->
+							</div><!-- col-sm-6 -->
+
+							<div class="col-lg-6 col-md-12">
+								<div class="single-post">
+									<div class="image-wrapper"><img src="images/SP10.jpg" alt="Blog Image"></div>
+
+									<div class="icons">
+										
+										<ul class="right-area social-icons">
+											<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                        <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                        <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+										</ul>
+									</div>
+									<h6 class="date"><em>Friday, October 13, 2020</em></h6>
+									<h3 class="title"><a href="#"><b class="light-color">Food Journey at Kedah Tua</b></a></h3>
+									<p>"What are the fun places to visit in Sungai Petani??
+										You may think it's a dull and uninteresting place, but Sungai Petani is actually one of the birthplaces of Kedah Tua, 
+										Malaysia's first dynasty, and still preserves many of its historical relics.
+										Since I used to work in Sungai Petani, I often take the opportunity to visit and explore. On this particular day, my partner and I both had the day off, 
+										so we decided to take a stroll around Sungai Petani."
+									</p>
+									<a class="btn read-more-btn" href="http://www.celinesworld.my/2017/11/kedah-tua.html"><b>READ MORE</b></a>
+								</div><!-- single-post -->
+							</div><!-- col-sm-6 -->
+
+							<div class="col-lg-6 col-md-12">
+								<div class="single-post">
+									<div class="image-wrapper"><img src="images/SP05.jpg" alt="Blog Image"></div>
+
+									<div class="icons">
+										<ul class="right-area social-icons">
+											<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                        <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                        <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+										</ul>
+									</div>
+									<h6 class="date"><em>Wednesday, April 29, 2015</em></h6>
+									<h3 class="title"><a href="#"><b class="light-color">Second Street (二街) Hawker Centre </b></a></h3>
+
+									<p>Pengkalan Street Hawker Centre, or more well known to local as Second Street (二街) can be equated as Gurney Drive hawker centre Sungai Petani version, 
+										as it houses a variety of great yet inexpensive hawker food. There are perhaps about 30 hawkers from various ethnics - Malay, Chinese, Indian here, 
+										and exodus of crowd can be seen flocking here during dinner time. Few stalls are open during lunch hours though.</p>
+
+									<a class="btn read-more-btn" href="https://www.crispoflife.com/2015/04/pengkalan-street-second-street-hawker.html"><b>READ MORE</b></a>
+								</div><!-- single-post -->
+							</div><!-- col-sm-6 -->
+
+							<div class="col-lg-6 col-md-12">
+								<div class="single-post">
+									<div class="image-wrapper"><img src="images/SP11.jpg" alt="Blog Image"></div>
+
+									<div class="icons">
+									
+										<ul class="right-area social-icons">
+											<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i>Share</a></li>
+					                        <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a>Share</li>
+					                        <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>Share</li>
+										</ul>
+									</div>
+									<h6 class="date"><em>Sunday, April 17, 2017</em></h6>
+									<h3 class="title"><a href="#"><b class="light-color">Chicken Chop & Pancake @ Eupe Food Court</b></a></h3>
+									<p>There's a popular food court in Sungai Petani called Eupe Food Court, also known as 28 Shops. It's located in Taman Ria Jaya and serves a variety of delicious foods such as fish and pork curry noodles, wonton noodles, pan mee, Western food, and fried Jawa mee.
+
+										This time, Applefish wants to introduce the Western food stall that has been in business for over 20 years.
+										
+										If you visit this food court, the must-try Western dishes are the chicken chop and pancake.</p>
+									<a class="btn read-more-btn" href="http://www.applefish.net/2016/04/chicken-chop-pancake-eupe-food-court-sungai-petani.html"><b>READ MORE</b></a>
+								</div><!-- single-post -->
+							</div><!-- col-sm-6 -->
+
+							
+						</div><!-- row -->
+
+						<a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>
+
+					</div><!-- blog-posts -->
+				</div><!-- col-lg-4 -->
+
+
+				<div class="col-lg-4 col-md-12">
+					<div class="sidebar-area">
+
+						<div class="sidebar-section about-author center-text">
+							<div class="author-image"><img src="images/SP12.jpg" alt="Author Image"></div>
+
+							<ul class="social-icons">
+								<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i></a></li>
+					            <li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a></li>
+					            <li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a></li>
+								<li><a href="https://vimeo.com/"><i class="ion-social-vimeo-outline"></i></a></li>
+								<li><a href="https://www.pinterest.com/"><i class="ion-social-pinterest-outline"></i></a></li>
+							</ul><!-- right-area -->
+
+							<h4 class="author-name"><b class="light-color">CheeHow Yap</b></h4>
+							<p>Hello and welcome to my blog! My name is Cheetah Dath and I'm the writer behind this website. 
+							   I started this blog to share my hometown, Sungai Petani Best Food and Location</p>
+
+							<div class="signature-image"><img src="images/SP13.png" alt="Signature Image"></div>
+							<a class="read-more-link" href="SPAbout.html"><b>READ MORE</b></a>
+
+						</div><!-- sidebar-section about-author -->
+
+						<div class="sidebar-section src-area">
+
+							<form action="post">
+								<input class="src-input" type="text" placeholder="Search">
+								<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+							</form>
+
+						</div><!-- sidebar-section src-area -->
+
+						<div class="sidebar-section newsletter-area">
+							<h5 class="title"><b>Subscribe to our newsletter</b></h5>
+							<form action="post">
+								<input class="email-input" type="text" placeholder="Your email here">
+								<button class="btn btn-2" type="submit">SUBSCRIBE</button>
+							</form>
+						</div><!-- sidebar-section newsletter-area -->
+
+						<div class="sidebar">
+							<h2 class="sidebar-heading">Featured Videos</h2>
+					
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/lS8f4A9Eh6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/MoKtAjRd_O4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/ot9C3vvN2kY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/dsxTOo3ZjKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/O3Z14cjj3I8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="300" height="169" src="https://www.youtube.com/embed/8zx9nIRA-BQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div><!-- sidebar-section category-area -->
+
+						<style>
+							.sidebar-heading {
+							  font-size: 1.2em;
+							  font-weight: bold;
+							  text-transform: uppercase;
+							  color: #333;
+							  margin-bottom: 10px;
+							}
+						  </style>
+
+<div class="sidebar-section category-area">
+	<h4 class="title"><b class="light-color">Categories of foods</b></h4>
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP17.jpeg" width="150" height="200" alt="Category Image">
+		<h6 class="name">Cafe</h6>
+	</a>
+
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP18.jpg"width="150" height="200" alt="Category Image">
+		<h6 class="name">Chinese</h6>
+	</a>
+
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP19.jpeg" width="150" height="200" alt="Category Image">
+		<h6 class="name">Thai</h6>s
+	</a>
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP20.jpg" width="150" height="200" alt="Category Image">
+		<h6 class="name">Indian</h6>
+	</a>
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP21.jpg" width="150" height="200" alt="Category Image">
+		<h6 class="name">Japanese</h6>
+	</a>
+	<a class="category" href="https://www.tripadvisor.com.my/Restaurants-g670110-Sungai_Petani_Kuala_Muda_District_Kedah.html">
+		<img src="images/SP22.jpg" width="150" height="200" alt="Category Image">
+		<h6 class="name">Korean</h6>
+	</a>
+	
+</div><!-- sidebar-section category-area -->
+
+					</div><!-- about-author -->
+				</div><!-- col-lg-4 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6">
+					<div class="footer-section">
+						<p class="copyright">Juli &copy; 2018. All rights reserved | Made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-sm-6">
+					<div class="footer-section">
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com/"><i class="ion-social-facebook-outline"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="ion-social-twitter-outline"></i></a></li>
+							<li><a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a></li>
+							<li><a href="https://vimeo.com/"><i class="ion-social-vimeo-outline"></i></a></li>
+							<li><a href="https://www.pinterest.com/"><i class="ion-social-pinterest-outline"></i></a></li>
+						</ul>
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+
+	<!-- SCIPTS -->
+
+	<script src="common-js/jquery-3.1.1.min.js"></script>
+
+	<script src="common-js/tether.min.js"></script>
+
+	<script src="common-js/bootstrap.js"></script>
+
+	<script src="common-js/layerslider.js"></script>
+
+	<script src="common-js/scripts.js"></script>
+
+</body>
+</html>
